@@ -16,7 +16,7 @@ public class CardUtil {
      */
     private static String getRandomName() {
         //将所有的卡片的文件名添加到列表
-        File res = new File("xingchen.res");
+        File res = new File("res");
         File[] ress = res.listFiles();//得到源文件的子目录
         for (File file : ress) {
             String[] fileName = file.getName().split("\\.");

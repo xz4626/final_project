@@ -4,6 +4,7 @@ import xingchen.model.Card;
 import xingchen.model.Cell;
 import xingchen.model.Layer;
 
+import java.net.URISyntaxException;
 import java.util.Random;
 
 import static xingchen.util.CardUtil.buildCards;
@@ -17,7 +18,7 @@ public class LayerUtil {
      * @param col 列
      * @return 图层
      */
-    public static Layer buildLayer(Integer row ,Integer col){
+    public static Layer buildLayer(Integer row ,Integer col) throws URISyntaxException {
 
 
         Layer layer = new Layer(row,col);

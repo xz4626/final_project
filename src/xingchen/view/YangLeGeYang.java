@@ -6,6 +6,7 @@ import xingchen.util.MapUtil;
 import javax.swing.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.net.URISyntaxException;
 import java.util.List;
 
 
@@ -23,7 +24,7 @@ public class YangLeGeYang extends JFrame {
     //    层数
     private int floor;
 
-    public YangLeGeYang(int floorHeight) {
+    public YangLeGeYang(int floorHeight) throws URISyntaxException {
 
         floor = floorHeight;
 
@@ -50,7 +51,7 @@ public class YangLeGeYang extends JFrame {
      * 是否进入下一关
      * @return 是否
      */
-    private boolean isNext() {
+    private boolean isNext() throws URISyntaxException {
         YangLeGeYang start = this;
         int cardSum = MapUtil.getAllCard();
         if (Card.getCount() == cardSum) {
@@ -155,7 +156,7 @@ public class YangLeGeYang extends JFrame {
      */
     private void initBackground() {
         //添加背景图片
-        JLabel background = new JLabel(new ImageIcon("res\\背景.jpg"));
+        JLabel background = new JLabel(new ImageIcon("res/背景.jpg"));
         background.setSize(480, 800);
 
         //把背景图片添加到界面当中
@@ -183,12 +184,16 @@ public class YangLeGeYang extends JFrame {
                     //自动刷新界面
                     start.repaint();
                     //随时判断是否进入下一关
-                    if (start.isNext()) {
-                        level++;
-                        //判断是不是最后一罐了
-                        if (level == 6) {
-                            win();//赢了
+                    try {
+                        if (start.isNext()) {
+                            level++;
+                            //判断是不是最后一罐了
+                            if (level == 6) {
+                                win();//赢了
+                            }
                         }
+                    } catch (URISyntaxException e) {
+                        throw new RuntimeException(e);
                     }
                     try {
                         Thread.sleep(40);

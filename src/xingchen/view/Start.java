@@ -1,9 +1,10 @@
 package xingchen.view;
 
 
+import java.net.URISyntaxException;
 
 public class Start {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws URISyntaxException {
 
         /*
         准备实现关卡，在主界面里实现，通过iswin()来判断，赢了，就直接关闭当前JFrame然后新创建一个JFrame

@@ -6,6 +6,7 @@ import xingchen.model.Layer;
 import xingchen.model.Map;
 
 import java.awt.*;
+import java.net.URISyntaxException;
 import java.util.List;
 import java.util.Random;
 
@@ -65,7 +66,7 @@ public class MapUtil {
      * @param floorHeight 层数
      * @return 地图
      */
-    public static Map build(Integer floorHeight) {
+    public static Map build(Integer floorHeight) throws URISyntaxException {
 
         Map map = new Map();
 

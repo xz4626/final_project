@@ -10,6 +10,8 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.File;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 
 public class Card extends Component{
@@ -43,6 +45,10 @@ public class Card extends Component{
     public static int getCount() {
         return count;
     }
+
+    private static final Map<String, Image> imageCache = new HashMap<>();
+    private static final Map<String, Image> grayImageCache = new HashMap<>();
+
 
     //用来调用
     // cardBox.addPool(card);
