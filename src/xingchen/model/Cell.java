@@ -6,17 +6,10 @@ public class Cell {
     private boolean state=false;
     private Card card;
 
-    /**
-     * 有牌true 无牌 false
-     * @return 有牌true 无牌 false
-     */
     public boolean isState() {
         return state;
     }
-    /**
-     * 有牌true 无牌 false
-     *
-     */
+
     public void setState(boolean state) {
         this.state = state;
     }

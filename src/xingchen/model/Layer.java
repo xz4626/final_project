@@ -51,11 +51,7 @@ public class Layer {
     private Cell[][] cells=null;//[4][5]
 
 
-    /**
-     * 初始化    最好是构建 6*6大小的图层，要不然其他地方还要改
-     * @param rowNum 行
-     * @param colNum 列
-     */
+
     public Layer(Integer rowNum, Integer colNum) {
         this.rowNum = rowNum;
         this.colNum = colNum;

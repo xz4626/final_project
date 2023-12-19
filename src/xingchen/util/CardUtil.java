@@ -10,10 +10,7 @@ import java.util.Random;
 public class CardUtil {
     static ArrayList<String> cardArr = new ArrayList<>();
 
-    /**
-     * 从25张图片里随机获取名字buildLayer
-     * @return 名字
-     */
+
     private static String getRandomName() {
         //将所有的卡片的文件名添加到列表
         File res = new File("res");
@@ -31,12 +28,6 @@ public class CardUtil {
         return cardArr.get(random.nextInt(25));
     }
 
-
-    /**
-     * 构建卡片数组
-     * @param capacity 数组大小
-     * @return  数组
-     */
     public static Card[] buildCards(Integer capacity) {
 
 
@@ -58,7 +49,6 @@ public class CardUtil {
         }
 
 
-//打乱数组
         //再用个循环遍历数组把里面元素打乱
         for (int i = 0; i < cards.length; i++) {
             //暂存变量

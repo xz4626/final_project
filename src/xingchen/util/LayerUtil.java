@@ -12,12 +12,6 @@ import static xingchen.util.CardUtil.buildCards;
 
 public class LayerUtil {
 
-    /**
-     * 构建一个指定行列大小的图层
-     * @param row 行
-     * @param col 列
-     * @return 图层
-     */
     public static Layer buildLayer(Integer row ,Integer col) throws URISyntaxException {
 
 
@@ -52,12 +46,7 @@ public class LayerUtil {
         initLayer(cards);
         return layer;
     }
-    /**
-     * 让图层稀疏
-     * 将部分卡片名字置为：空空
-     *
-     * @param cards 要被变成稀疏数组的数组
-     */
+
     private static void initLayer(Card[] cards) {
         Random random = new Random();
         for (int j = 0; j < 6; j++) {

@@ -5,14 +5,6 @@ import xingchen.util.MapUtil;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * //TODO
- * 地图类，包含好几个图层
- * @author kcx
- * @version v1.0.0
- * @description //TODO
- * @createTime 2023-7-14 15:52
- */
 public class Map {
     //层数
     private Integer floorHeight;
